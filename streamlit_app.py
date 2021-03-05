@@ -47,6 +47,9 @@ from processing_functions import process_image
 
 # For Neural Style Transfer
 from style_functions import load_image
+
+# neural style transfer is an expensive computation - recommended to use the @st.cache decorator before it.
+@st.cache
 from run_vgg19_style_transfer import run_vgg19_style_transfer
 
 
