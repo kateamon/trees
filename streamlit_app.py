@@ -308,7 +308,6 @@ def style_transfer(image=None):
 			#st.write('For debugging: style_image type is ', type(style_image))
 			content_image = image
 
-            @st.cache
 			image_w_style = run_vgg19_style_transfer(image, style_image)
 
 			# Captions for the input photo, style photo, and resulting output photo.
