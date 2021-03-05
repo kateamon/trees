@@ -15,6 +15,8 @@ from torchvision import transforms, models
 
 from style_functions import load_image, im_convert, gram_matrix, get_features, init_vgg
 
+import streamlit as st
+
 @st.cache
 def run_vgg19_style_transfer(content_image, style_image):
     ''' Obtain the features for style and content images,
