@@ -49,7 +49,7 @@ from processing_functions import process_image
 from style_functions import load_image
 
 # neural style transfer is an expensive computation - recommended to use the @st.cache decorator before it.
-@st.cache
+
 from run_vgg19_style_transfer import run_vgg19_style_transfer
 
 
@@ -308,6 +308,7 @@ def style_transfer(image=None):
 			#st.write('For debugging: style_image type is ', type(style_image))
 			content_image = image
 
+            @st.cache
 			image_w_style = run_vgg19_style_transfer(image, style_image)
 
 			# Captions for the input photo, style photo, and resulting output photo.
